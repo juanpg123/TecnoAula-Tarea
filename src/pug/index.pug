@@ -1,14 +1,14 @@
 doctype html
-html(lang='en')
+html(lang='es')
 
     head
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
+        meta(name='description', content='TecnoAula - Soporte técnico, mantenimiento de equipos y desarrollo web básico')
+        meta(name='author', content='TecnoAula')
 
-        title Resume - Start Bootstrap Theme
+        title TecnoAula - Soporte Técnico & Desarrollo Web
 
         link(rel='icon', type='image/x-icon', href='assets/img/favicon.ico')
 
@@ -27,41 +27,113 @@ html(lang='en')
         // Navigation
         nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
             a.navbar-brand.js-scroll-trigger(href='#page-top')
-                span.d-block.d-lg-none Clarence Taylor
+                span.d-block.d-lg-none TecnoAula
                 span.d-none.d-lg-block
-                    img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='assets/img/profile.jpg', alt='...')
+                    img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='assets/img/logo.svg', alt='Logo de TecnoAula')
             button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                 span.navbar-toggler-icon
             #navbarResponsive.collapse.navbar-collapse
                 ul.navbar-nav
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#about') About
+                        a.nav-link.js-scroll-trigger(href='#inicio') TecnoAula
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#experience') Experience
+                        a.nav-link.js-scroll-trigger(href='#servicios') Servicios
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#education') Education
+                        a.nav-link.js-scroll-trigger(href='#persona1') Juan Pineda
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#skills') Skills
+                        a.nav-link.js-scroll-trigger(href='#persona2') Eliedcer Ruza
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#interests') Interests
+                        a.nav-link.js-scroll-trigger(href='#persona3') Jorge Marrufo
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#awards') Awards
+                        a.nav-link.js-scroll-trigger(href='#persona4') Alanyan Nava
 
         // Page Content
         .container-fluid.p-0
 
-            // About
-            section#about.resume-section
+            // Sección 1: TecnoAula (Inicio & Propósito)
+            section#inicio.resume-section
                 .resume-section-content
                     h1.mb-0
-                        | Clarence 
-                        span.text-primary Taylor
-                    .subheading.mb-5
-                        | 3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 · 
-                        a(href='mailto:name@email.com') name@email.com
+                        | Tecno
+                        span.text-primary Aula
+                    .subheading.mb-4
+                        | Soporte Técnico · Mantenimiento de Equipos · Desarrollo Web Básico
+                    .subheading.mb-4.text-muted
+                        | Venezuela · Correo: 
+                        a(href='mailto:tecnoaula.ve@gmail.com') tecnoaula.ve@gmail.com
+                        |  · Tel: (+58) 414-6902283
+                    p.lead.mb-4
+                        | En #[strong TecnoAula] brindamos soluciones tecnológicas accesibles, prácticas y confiables para estudiantes, emprendedores y pequeños negocios. Nuestro propósito es ser el aliado de confianza que mantiene tus herramientas informáticas en óptimo estado y te ayuda a dar el salto al mundo digital con una presencia web moderna y funcional.
+                    
+                    h3.mb-3.text-uppercase Nuestro Propósito
+                    p.mb-4
+                        | Nacer como respuesta a las necesidades tecnológicas cotidianas de nuestra comunidad escolar y comercial, ofreciendo diagnósticos honestos, precios solidarios, garantía de satisfacción y tiempos de respuesta ágiles tanto de forma presencial como remota.
+
+                    .social-icons.mb-4
+                        a.social-icon(href='#!', title='WhatsApp')
+                            i.fab.fa-whatsapp
+                        a.social-icon(href='#!', title='Instagram')
+                            i.fab.fa-instagram
+                        a.social-icon(href='#!', title='LinkedIn')
+                            i.fab.fa-linkedin-in
+                        a.social-icon(href='#!', title='GitHub')
+                            i.fab.fa-github
+
+            hr.m-0
+
+            // Sección 2: Servicios
+            section#servicios.resume-section
+                .resume-section-content
+                    h2.mb-4
+                        | Nuestros 
+                        span.text-primary Servicios
                     p.lead.mb-5
-                        | I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
-                    .social-icons
+                        | Diseñamos soluciones integrales enfocadas en prolongar la vida útil de tus equipos informáticos y potenciar tu actividad académica o comercial.
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-1 Soporte Técnico & Optimización de Software
+                            .subheading.mb-3 Soluciones Lógicas y Asistencia Remota/Presencial
+                            p
+                                | Diagnóstico preciso y resolución de fallas en sistemas operativos Windows y Linux. Desinfección completa de virus, malware y programas basura que ralentizan tu computadora. Instalación de suites de oficina, programas educativos, utilitarios de productividad y configuración de impresoras o periféricos.
+                        .flex-shrink-0
+                            span.text-primary Servicio 01
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-1 Mantenimiento Preventivo y Correctivo de Hardware
+                            .subheading.mb-3 Cuidado Físico y Actualización de Componentes
+                            p
+                                | Limpieza profunda de componentes internos, desoxigenación de circuitos y reemplazo de pasta térmica de alta conductividad para evitar sobrecalentamientos. Aceleración de computadoras y laptops mediante la instalación de unidades de estado sólido (SSD) y ampliación de memoria RAM. Reparación o sustitución de partes averiadas.
+                        .flex-shrink-0
+                            span.text-primary Servicio 02
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h3.mb-1 Desarrollo Web Básico & Presencia Digital
+                            .subheading.mb-3 Tu Negocio en Internet con Diseño Profesional
+                            p
+                                | Creación de páginas web institucionales, portafolios y catálogos de servicios 100% responsivos (adaptados a celulares, tabletas y computadoras). Asesoría en la adquisición de dominios, configuración de correos corporativos y vinculación de botones directos a WhatsApp para captar clientes rápidamente.
+                        .flex-shrink-0
+                            span.text-primary Servicio 03
+
+            hr.m-0
+
+            // Integrante 1: Juan Pineda
+            section#persona1.resume-section
+                .resume-section-content
+                    img.img-fluid.rounded-circle.mb-4(src='assets/img/JuanPineda.jpeg', alt='Foto de Juan Pineda', style='width: 150px; height: 150px; object-fit: cover;')
+                    h1.mb-0
+                        | Juan 
+                        span.text-primary Pineda
+                    .subheading.mb-2.text-primary
+                        | Coordinador de Desarrollo Web & Frontend
+                    .subheading.mb-4
+                        | Av. Francisco de Miranda · Caracas, Venezuela · +58 4146902283 · 
+                        a(href='mailto:juandpinedag09@gmail.com') juandpinedag09@gmail.com
+                    p.lead.mb-4
+                        | En #[strong TecnoAula], Juan lidera el área de desarrollo web. Es el responsable de transformar las ideas y necesidades de los clientes en páginas web atractivas, limpias, veloces y fáciles de usar desde cualquier dispositivo móvil o de escritorio.
+                    .social-icons.mb-5
                         a.social-icon(href='#!')
                             i.fab.fa-linkedin-in
                         a.social-icon(href='#!')
@@ -69,182 +141,165 @@ html(lang='en')
                         a.social-icon(href='#!')
                             i.fab.fa-twitter
                         a.social-icon(href='#!')
-                            i.fab.fa-facebook-f
+                            i.fab.fa-whatsapp
 
-            hr.m-0
+                    h3.mb-4.text-uppercase Aporte y Funciones en TecnoAula
 
-            // Experience
-            section#experience.resume-section
-               .resume-section-content
-                    h2.mb-5 Experience
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-4
                         .flex-grow-1
-                            h3.mb-0 Senior Web Developer
-                            .subheading.mb-3 Intelitec Solutions
+                            h4.mb-0 Maquetación y Construcción Web
+                            .subheading.mb-2 Área de Desarrollo
                             p
-                                | Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+                                | Programación con HTML5, CSS3, JavaScript y Bootstrap de páginas informativas y catálogos digitales con navegación intuitiva y altos estándares de rendimiento.
                         .flex-shrink-0
-                            span.text-primary March 2013 - Present
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Web Developer
-                            .subheading.mb-3 Intelitec Solutions
-                            p
-                                | Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
-                        .flex-shrink-0
-                            span.text-primary December 2011 - March 2013
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Junior Web Designer
-                            .subheading.mb-3 Shout! Media Productions
-                            p
-                                | Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
-                        .flex-shrink-0
-                            span.text-primary July 2010 - December 2011
+                            span.text-primary Rol Activo
 
                     .d-flex.flex-column.flex-md-row.justify-content-between
                         .flex-grow-1
-                            h3.mb-0 Web Design Intern
-                            .subheading.mb-3 Shout! Media Productions
+                            h4.mb-0 Adaptabilidad Móvil y Canales de Contacto
+                            .subheading.mb-2 Experiencia del Cliente
                             p
-                                | Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
+                                | Asegura que cada sitio web cargue de manera impecable en teléfonos celulares e integra botones interactivos directos a WhatsApp y redes sociales para maximizar las consultas de clientes.
                         .flex-shrink-0
-                            span.text-primary September 2008 - June 2010
+                            span.text-primary Rol Activo
 
             hr.m-0
 
-            // Education
-            section#education.resume-section
+            // Integrante 2: Eliedcer Ruza
+            section#persona2.resume-section
                 .resume-section-content
-                    h2.mb-5 Education
+                    img.img-fluid.rounded-circle.mb-4(src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&h=300&q=80', alt='Foto de Eliedcer Ruza', style='width: 150px; height: 150px; object-fit: cover;')
+                    h1.mb-0
+                        | Eliedcer 
+                        span.text-primary Ruza
+                    .subheading.mb-2.text-primary
+                        | Especialista en Backend & Respaldo de Datos
+                    .subheading.mb-4
+                        | Av. 5 de Julio, Bella Vista · Maracaibo, Venezuela · +584126198441 · 
+                        a(href='mailto:Eliedcer@gmail.com') Eliedcer@gmail.com
+                    p.lead.mb-4
+                        | En #[strong TecnoAula], Eliedcer coordina la seguridad lógica de los datos y el funcionamiento interno de las plataformas web. Protege la información más valiosa de los clientes y asegura que los sistemas de contacto funcionen sin interrupciones.
+                    .social-icons.mb-5
+                        a.social-icon(href='#!')
+                            i.fab.fa-linkedin-in
+                        a.social-icon(href='#!')
+                            i.fab.fa-github
+                        a.social-icon(href='#!')
+                            i.fab.fa-twitter
+                        a.social-icon(href='#!')
+                            i.fab.fa-whatsapp
 
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                    h3.mb-4.text-uppercase Aporte y Funciones en TecnoAula
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-4
                         .flex-grow-1
-                            h3.mb-0 University of Colorado Boulder
-                            .subheading.mb-3 Bachelor of Science
-                            div Computer Science - Web Development Track
-                            p GPA: 3.23
+                            h4.mb-0 Respaldo y Protección de Datos
+                            .subheading.mb-2 Seguridad Informática
+                            p
+                                | Creación de copias de seguridad de archivos personales y laborales antes de formateos y reinstalaciones, garantizando que el cliente nunca pierda sus documentos o fotografías importantes.
                         .flex-shrink-0
-                            span.text-primary August 2006 - May 2010
+                            span.text-primary Rol Activo
 
                     .d-flex.flex-column.flex-md-row.justify-content-between
                         .flex-grow-1
-                            h3.mb-0 James Buchanan High School
-                            .subheading.mb-3 Technology Magnet Program
-                            p GPA: 3.56
+                            h4.mb-0 Lógica Backend y Formularios
+                            .subheading.mb-2 Servicios Web
+                            p
+                                | Configuración de servicios de correo electrónico corporativo, validación de formularios de contacto y gestión de bases de datos básicas con Node.js y MySQL.
                         .flex-shrink-0
-                            span.text-primary August 2002 - May 2006
+                            span.text-primary Rol Activo
 
             hr.m-0
 
-            // Skills
-            section#skills.resume-section
+            // Integrante 3: Jorge Marrufo
+            section#persona3.resume-section
                 .resume-section-content
-                    h2.mb-5 Skills
-                    .subheading.mb-3 Programming Languages & Tools
-                    ul.list-inline.dev-icons
-                        li.list-inline-item
-                            i.fab.fa-html5
-                        li.list-inline-item
-                            i.fab.fa-css3-alt
-                        li.list-inline-item
-                            i.fab.fa-js-square
-                        li.list-inline-item
-                            i.fab.fa-angular
-                        li.list-inline-item
-                            i.fab.fa-react
-                        li.list-inline-item
-                            i.fab.fa-node-js
-                        li.list-inline-item
-                            i.fab.fa-sass
-                        li.list-inline-item
-                            i.fab.fa-less
-                        li.list-inline-item
-                            i.fab.fa-wordpress
-                        li.list-inline-item
-                            i.fab.fa-gulp
-                        li.list-inline-item
-                            i.fab.fa-grunt
-                        li.list-inline-item
-                            i.fab.fa-npm
-                    .subheading.mb-3 Workflow
-                    ul.fa-ul.mb-0
-                        li
-                            span.fa-li
-                                i.fas.fa-check
-                            | Mobile-First, Responsive Design
-                        li
-                            span.fa-li
-                                i.fas.fa-check
-                            | Cross Browser Testing & Debugging
-                        li
-                            span.fa-li
-                                i.fas.fa-check
-                            | Cross Functional Teams
-                        li
-                            span.fa-li
-                                i.fas.fa-check
-                            | Agile Development & Scrum
+                    img.img-fluid.rounded-circle.mb-4(src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&h=300&q=80', alt='Foto de Jorge Marrufo', style='width: 150px; height: 150px; object-fit: cover;')
+                    h1.mb-0
+                        | Jorge 
+                        span.text-primary Marrufo
+                    .subheading.mb-2.text-primary
+                        | Diseñador UI/UX & Identidad Visual
+                    .subheading.mb-4
+                        | Av. Bolívar Norte · Valencia, Venezuela · +584146110204 · 
+                        a(href='mailto:jorpcperro@hotmail.com') jorpcperro@hotmail.com
+                    p.lead.mb-4
+                        | En #[strong TecnoAula], Jorge es el encargado de la imagen visual y la experiencia de usuario. Define la identidad gráfica del negocio y crea bocetos e interfaces web atractivas y legibles que transmiten confianza y profesionalismo a primera vista.
+                    .social-icons.mb-5
+                        a.social-icon(href='#!')
+                            i.fab.fa-linkedin-in
+                        a.social-icon(href='#!')
+                            i.fab.fa-github
+                        a.social-icon(href='#!')
+                            i.fab.fa-dribbble
+                        a.social-icon(href='#!')
+                            i.fab.fa-whatsapp
+
+                    h3.mb-4.text-uppercase Aporte y Funciones en TecnoAula
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-4
+                        .flex-grow-1
+                            h4.mb-0 Prototipado e Interfaces (UI/UX)
+                            .subheading.mb-2 Diseño Digital
+                            p
+                                | Elaboración de wireframes y prototipos interactivos en Figma para que los clientes visualicen y aprueben el diseño de su página web antes de iniciar la programación.
+                        .flex-shrink-0
+                            span.text-primary Rol Activo
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h4.mb-0 Identidad Gráfica y Publicidad
+                            .subheading.mb-2 Marca y Comunicación
+                            p
+                                | Creación del logotipo de TecnoAula, paletas de colores corporativas, banners promocionales y material publicitario para redes sociales.
+                        .flex-shrink-0
+                            span.text-primary Rol Activo
 
             hr.m-0
 
-            // Interests
-            section#interests.resume-section
+            // Integrante 4: Alanyan Nava
+            section#persona4.resume-section
                 .resume-section-content
-                    h2.mb-5 Interests
-                    p
-                        | Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.
-                    p.mb-0
-                        | When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.
+                    img.img-fluid.rounded-circle.mb-4(src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&h=300&q=80', alt='Foto de Alanyan Nava', style='width: 150px; height: 150px; object-fit: cover;')
+                    h1.mb-0
+                        | Alanyan 
+                        span.text-primary Nava
+                    .subheading.mb-2.text-primary
+                        | Jefe de Soporte Técnico & Mantenimiento de Hardware
+                    .subheading.mb-4
+                        | Av. Lara con Av. Los Leones · Barquisimeto, Venezuela · +584127138670 · 
+                        a(href='mailto:alanyan.nava@email.com') alanyan.nava@email.com
+                    p.lead.mb-4
+                        | En #[strong TecnoAula], Alanyan lidera el área de soporte técnico presencial y mantenimiento de hardware. Su trabajo consiste en diagnosticar problemas físicos en computadoras, realizar limpieza especializada y devolverles su máximo rendimiento.
+                    .social-icons.mb-5
+                        a.social-icon(href='#!')
+                            i.fab.fa-linkedin-in
+                        a.social-icon(href='#!')
+                            i.fab.fa-github
+                        a.social-icon(href='#!')
+                            i.fab.fa-twitter
+                        a.social-icon(href='#!')
+                            i.fab.fa-whatsapp
 
-            hr.m-0
+                    h3.mb-4.text-uppercase Aporte y Funciones en TecnoAula
 
-            // Awards
-            section#awards.resume-section
-                .resume-section-content
-                    h2.mb-5 Awards & Certifications
-                    ul.fa-ul.mb-0
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | Google Analytics Certified Developer
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | Mobile Web Specialist - Google Certification
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 1
-                            sup st 
-                            | Place - University of Colorado Boulder - Emerging Tech Competition 2009
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 1
-                            sup st 
-                            | Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 2
-                            sup nd 
-                            | Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 1
-                            sup st 
-                            | Place - James Buchanan High School - Hackathon 2006
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 3
-                            sup rd 
-                            | Place - James Buchanan High School - Hackathon 2005
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-4
+                        .flex-grow-1
+                            h4.mb-0 Mantenimiento Físico y Cambio Térmico
+                            .subheading.mb-2 Hardware & Taller
+                            p
+                                | Desarmado y limpieza profunda de polvo en ventiladores y tarjetas madre, sustitución de pasta térmica y corrección de ruidos o fallas de sobrecalentamiento.
+                        .flex-shrink-0
+                            span.text-primary Rol Activo
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h4.mb-0 Actualización de Componentes y Ensamblaje
+                            .subheading.mb-2 Potenciación de Equipos
+                            p
+                                | Instalación de unidades SSD, ampliación de módulos de memoria RAM, ensamblaje de equipos a medida y formateo con instalación limpia de sistemas operativos.
+                        .flex-shrink-0
+                            span.text-primary Rol Activo
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
