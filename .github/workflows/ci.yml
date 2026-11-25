@@ -1,0 +1,119 @@
+name: CI / CD - TecnoAula
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+  workflow_dispatch:
+
+# Permisos mínimos por defecto; el job de deploy solicita permisos para GitHub Pages
+permissions:
+  contents: read
+
+# Evita que ejecuciones simultáneas en la misma rama se pisen entre sí
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build y Verificación (Pug, SCSS, JS y Assets)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependencias (limpio con package-lock.json)
+        run: npm ci
+
+      - name: Verificar sintaxis de JavaScript fuente
+        run: node --check src/js/scripts.js
+
+      - name: Compilar proyecto (clean, pug, scss, scripts, assets)
+        run: npm run build
+
+      - name: Verificar archivos generados y referencias en dist/
+        run: |
+          node -e '
+            const fs = require("fs");
+            const path = require("path");
+
+            const requiredFiles = [
+              "dist/index.html",
+              "dist/css/styles.css",
+              "dist/js/scripts.js",
+              "dist/assets/img/favicon.ico",
+              "dist/assets/img/logo.svg",
+              "dist/assets/img/JuanPineda.jpeg"
+            ];
+
+            for (const file of requiredFiles) {
+              if (!fs.existsSync(file) || fs.statSync(file).size === 0) {
+                console.error(`ERROR: Falta o está vacío: ${file}`);
+                process.exit(1);
+              }
+            }
+
+            const html = fs.readFileSync("dist/index.html", "utf8");
+            if (!html.includes("TecnoAula")) {
+              console.error("ERROR: dist/index.html no contiene la marca TecnoAula.");
+              process.exit(1);
+            }
+
+            // Verifica que todos los src/href locales en dist/index.html existan en dist/
+            const attrRegex = /(?:href|src)=["\x27](?!https?:|mailto:|#)([^"\x27]+)["\x27]/g;
+            let match;
+            while ((match = attrRegex.exec(html)) !== null) {
+              const cleanRef = match[1].split(/[?#]/)[0];
+              if (!cleanRef) continue;
+              const target = path.join("dist", cleanRef);
+              if (!fs.existsSync(target)) {
+                console.error(`ERROR: Recurso local referenciado no encontrado: ${target}`);
+                process.exit(1);
+              }
+            }
+
+            console.log("Verificación completada: todos los archivos y enlaces locales son válidos.");
+          '
+
+      - name: Subir artefacto compilado (dist) para descarga/revisión
+        uses: actions/upload-artifact@v4
+        with:
+          name: tecnoaula-dist
+          path: dist/
+          retention-days: 14
+
+      - name: Empaquetar sitio para GitHub Pages
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    name: Desplegar en GitHub Pages
+    needs: build
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
